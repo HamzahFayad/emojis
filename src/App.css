@@ -1,38 +1,63 @@
 .App {
-  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body, *{
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+section{
+  width: 90vw;
+  margin: 4vw auto;
+}
+
+@media screen and (min-width: 900px) {
+  section {
+      width: 70vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+  section {
+    width: 60vw;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section * {
+  width: 100%;
+}
+
+input{
+  border-radius: 8px;
+  padding: 14px;
+  border: 2px solid #ccc;
+  margin: 4vh 0;
+}
+
+.emojis-list{
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  height: 60vh;
+  overflow-y: scroll;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.emojis-item{
+  width: 50px;
+  height: 50px;
+  background-color: #dbdbdb;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 8px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.emojis-item p {
+    text-align: center;
+    align-self: center;
+    line-height: 20px;
+    cursor: pointer;
 }
