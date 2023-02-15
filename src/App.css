@@ -38,7 +38,7 @@ input{
 .emojis-list{
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
   height: 60vh;
   overflow-y: scroll;
   background-color: #f8f8f8;
@@ -60,4 +60,22 @@ input{
     align-self: center;
     line-height: 20px;
     cursor: pointer;
+}
+
+
+.navidata{
+  overflow-y: hidden;
+  overflow-x: scroll;
+  background-color: #ddd; 
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+.navidata p{
+  width: 60px;
+  display: inline-block;
+  padding: 0 12px;
+  margin: 12px;
 }
